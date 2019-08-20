@@ -1,9 +1,9 @@
 const express = require('express');
-const indexRoute = require('./routes/index')
 const app = express();
 
 //Routes
-app.use('/', indexRoute);
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
 
 const PORT = process.env.PORT || 5000;
 
